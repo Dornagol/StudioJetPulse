@@ -60,8 +60,8 @@ const OrderModal = ({ isOpen, onClose }: OrderModalProps) => {
                 file:mr-4 file:py-2 file:px-4
                 file:rounded-md file:border-0
                 file:text-sm file:font-medium
-                file:bg-lime-50 file:text-lime-700
-                hover:file:bg-lime-100"
+                file:bg-gray-300 file:text-gray-700
+                hover:file:bg-gray-200"
             />
           </div>
 
@@ -109,7 +109,7 @@ const OrderModal = ({ isOpen, onClose }: OrderModalProps) => {
 
           <button
             type="submit"
-            className="w-full bg-lime-500 text-black py-2 px-4 rounded-md hover:bg-lime-600 transition-colors"
+            className="w-full bg-gray-500 text-white-500 py-2 px-4 rounded-md hover:bg-gray-600 transition-colors"
           >
             Envoyer la Commande
           </button>
