@@ -15,13 +15,13 @@ export default function Header({ onOrderClick }: HeaderProps) {
         <span className="font-bold text-gray-500 animate-pulse ml-1">.</span>
         </span> 
       </div>
-        <button
-          onClick={onOrderClick}
-          className="relative top-1.5 inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-white to-gray-500 group-hover:border-black group-hover:from-white group-hover:to-gray-500 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black max-w-full sm:text-sm md:text-base">
-          <span className="relative px-4 py-1.5 transition-all ease-in duration-75 bg-black dark:bg-black rounded-md font-bold group-hover:bg-opacity-0">
-            Commander Maintenant
-          </span>
-        </button>
+      <button
+        onClick={onOrderClick}
+        className="relative top-1.5 inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs sm:text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-white to-gray-500 group-hover:border-black group-hover:from-white group-hover:to-gray-500 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black">
+        <span className="relative whitespace-nowrap px-2 sm:px-4 py-1.5 transition-all ease-in duration-75 bg-black dark:bg-black rounded-md font-bold group-hover:bg-opacity-0">
+          Commander Maintenant
+        </span>
+      </button>
       </nav>
     </header>
   );
