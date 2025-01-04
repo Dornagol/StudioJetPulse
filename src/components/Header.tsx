@@ -19,15 +19,13 @@ export default function Header({ onOrderClick }: HeaderProps) {
       </div>
       <button
       onClick={onOrderClick}
-      className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-white to-gray-500 group-hover:from-white group-hover:to-gray-500 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black"
+      className="relative inline-flex items-center top-1.5 justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-white to-gray-500 group-hover:from-white group-hover:to-gray-500 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black"
     >
       <span className="relative px-3 py-1.5 transition-all ease-in duration-75 bg-black dark:bg-black rounded-md font-bold group-hover:bg-opacity-0">
-        {/* Desktop: texte */}
         <span className="hidden sm:inline">
           Commander Maintenant
         </span>
         
-        {/* Mobile: images qui changent au hover */}
         <span className="sm:hidden w-6 h-6 flex items-center justify-center">
           <img 
             src={white} 
