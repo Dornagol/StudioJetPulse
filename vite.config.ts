@@ -7,8 +7,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: "/StudioJetPulse/",
+  base: "./",
   build: {
+    outDir: 'dist',
     assetsDir: 'assets',
   },
 });
