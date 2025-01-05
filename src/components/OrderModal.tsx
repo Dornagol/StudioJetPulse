@@ -28,14 +28,14 @@ const OrderModal = ({ isOpen, onClose }: OrderModalProps) => {
         >
           ✕
         </button>
-
         <h2 className="text-2xl font-bold text-black mb-4">Passer Votre Commande</h2>
         
-        <form className="space-y-4">
+        <form action="https://dornagol.app.n8n.cloud/webhook/794bbc9b-0a9d-4633-bc35-8d82bec7258b" method="POST" className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700">Nom</label>
             <input
               type="text"
+              name="nom"
               className="mt-1 pl-2.5 pr-1 block w-full rounded-md text-black border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               placeholder="Votre nom"
             />
@@ -45,15 +45,17 @@ const OrderModal = ({ isOpen, onClose }: OrderModalProps) => {
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
+              name="email"
               className="mt-1 pl-2.5 pr-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               placeholder="votre@email.com"
             />
           </div>
-
+          
           <div>
             <label className="block text-sm font-medium text-gray-700">Image</label>
             <input
               type="file"
+              name="image"
               accept="image/*"
               onChange={handleImageChange}
               className="mt-1 block w-full text-sm text-gray-500
@@ -64,52 +66,56 @@ const OrderModal = ({ isOpen, onClose }: OrderModalProps) => {
                 hover:file:bg-gray-200"
             />
           </div>
-
+          
           <div>
             <label className="block text-sm font-medium text-gray-700">Quantité</label>
             <input
               type="number"
+              name="quantite"
               min="1"
               value={quantity}
               onChange={(e) => setQuantity(parseInt(e.target.value))}
               className="mt-1 pl-2.5 pr-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
           </div>
-
+          
           <div>
             <label className="block text-sm font-medium text-gray-700">Type de Surface</label>
             <input
               type="text"
+              name="typeSurface"
               value={surface}
               onChange={(e) => setSurface(e.target.value)}
               className="mt-1 pl-2.5 pr-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               placeholder="Ex: Mur, Sol, Plafond..."
             />
           </div>
-
+          
           <div>
             <label className="block text-sm font-medium text-gray-700">Taille de la Surface (m²)</label>
             <input
               type="text"
+              name="tailleSurface"
               value={surfaceSize}
               onChange={(e) => setSurfaceSize(e.target.value)}
               className="mt-1 pl-2.5 pr-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               placeholder="Ex: 20m²"
             />
           </div>
-
+          
           <div>
             <label className="block text-sm font-medium text-gray-700">Détails du Projet</label>
             <textarea
+              name="details"
               className="mt-1 pl-2.5 pr-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               rows={4}
               placeholder="Décrivez votre projet..."
             />
           </div>
-
+          
           <button
             type="submit"
-            className="w-full bg-gray-500 text-white-500 py-2 px-4 rounded-md hover:bg-gray-600 transition-colors"
+            className="w-full bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors"
           >
             Envoyer la Commande
           </button>
