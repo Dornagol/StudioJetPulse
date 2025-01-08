@@ -121,20 +121,20 @@ const OrderModal = ({ isOpen, onClose }: OrderModalProps) => {
               value={surface}
               onChange={(e) => setSurface(e.target.value)}
               className="mt-1 pl-2.5 pr-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              placeholder="Ex: Mur, Sol, Plafond..."
+              placeholder="Ex: Ardoise, Bois, Mirroir..."
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Taille de la Surface (m²)</label>
+            <label className="block text-sm font-medium text-gray-700">Taille de la Surface (cm²)</label>
             <input
               type="text"
               name="tailleSurface"
               value={surfaceSize}
               onChange={(e) => setSurfaceSize(e.target.value)}
               className="mt-1 pl-2.5 pr-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              placeholder="Ex: 20m²"
+              placeholder="Ex: 20cm²"
               required
             />
           </div>
